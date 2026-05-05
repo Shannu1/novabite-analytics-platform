@@ -1,0 +1,4 @@
+customer_id,customer_name,email,payment_terms,credit_limit,sales_territory,erp_source,status,created_date,_ingestion_timestamp
+CUST001,Meridian Supermarkets PLC,meridian.supermarkets.plc@retail.co.uk,NET30,750000,UK_NORTH,NAV1,ACTIVE,2023-01-01,2026-05-05T00:00:29.869751
+CUST004,Northgate Wholesale,northgate.wholesale@retail.co.uk,NET60,250000,UK_NORTH,NAV1,ACTIVE,2023-01-01,2026-05-05T00:00:29.869762
+CUST011,Lakeland Wholesale Group,lakeland.wholesale.group@retail.co.uk,NET30,88000,UK_NORTH,NAV1,ACTIVE,2023-01-01,2026-05-05T00:00:29.869766

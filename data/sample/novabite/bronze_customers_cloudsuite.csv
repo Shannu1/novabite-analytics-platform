@@ -1,0 +1,4 @@
+customer_id,customer_name,email,payment_terms,credit_limit,sales_territory,erp_source,status,created_date,_ingestion_timestamp
+CUST003,Greenfield Foods Ltd,greenfield.foods.ltd@retail.co.uk,NET30,300000,UK_SOUTH,CLOUDSUITE,ACTIVE,2023-01-01,2026-05-05T00:00:29.870964
+CUST009,Southcoast Retail Ltd,southcoast.retail.ltd@retail.co.uk,NET30,160000,UK_SOUTH,CLOUDSUITE,ACTIVE,2023-01-01,2026-05-05T00:00:29.870967
+CUST012,Metro Food Service,metro.food.service@retail.co.uk,NET45,445000,UK_SOUTH,CLOUDSUITE,ACTIVE,2023-01-01,2026-05-05T00:00:29.870969
