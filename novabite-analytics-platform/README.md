@@ -1,4 +1,4 @@
-# 🏭 NovaBite Analytics Platform — dbt on Databricks
+#  NovaBite Analytics Platform — dbt on Databricks
 
 ![dbt](https://img.shields.io/badge/dbt-1.8-orange?logo=dbt)
 ![Databricks](https://img.shields.io/badge/Databricks-Unity%20Catalog-red?logo=databricks)
@@ -10,7 +10,7 @@ A production-style analytics engineering platform built with **dbt Core on Datab
 
 ---
 
-## 📐 Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -52,7 +52,7 @@ A production-style analytics engineering platform built with **dbt Core on Datab
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 novabite-analytics-platform/
@@ -97,7 +97,7 @@ novabite-analytics-platform/
 
 ---
 
-## ✅ Data Quality Tests
+## Data Quality Tests
 
 | Model | Tests | Coverage |
 |-------|-------|----------|
@@ -111,7 +111,7 @@ novabite-analytics-platform/
 
 ---
 
-## 🔄 Key Technical Decisions
+## Key Technical Decisions
 
 | Decision | Approach | Why |
 |----------|----------|-----|
