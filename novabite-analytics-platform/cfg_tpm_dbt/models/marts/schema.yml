@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: fct_tpm_promotions
+    description: "Trade promotion fact table. Incremental — merges by surrogate key on Delta Lake. Partitioned by transaction_date."
+    columns:
+      - name: promotion_transaction_key
+        description: "Surrogate key — MD5(promotion_id | erp_source | transaction_date)"
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: discount_pct
+        tests:
+          - not_null
+      - name: transaction_date
+        tests:
+          - not_null

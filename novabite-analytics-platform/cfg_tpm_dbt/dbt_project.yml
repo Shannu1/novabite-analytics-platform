@@ -1,0 +1,31 @@
+name: 'cfg_tpm_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'cfg_tpm_dbt'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  cfg_tpm_dbt:
+    staging:
+      +tags: ["staging", "novabite"]
+      +materialized: view
+    intermediate:
+      +tags: ["intermediate", "novabite"]
+      +materialized: table
+    marts:
+      +tags: ["marts", "gold", "novabite"]
+      +materialized: incremental
+
+seeds:
+  cfg_tpm_dbt:
+    +schema: cfg_tpm_seeds

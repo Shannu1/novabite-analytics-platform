@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: stg_erp_customers
+    description: "Cleaned and standardised customer master from all ERP sources. NULL customer_ids filtered. Names and territories standardised."
+    columns:
+      - name: customer_id
+        description: "Unique customer identifier from source ERP"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_name
+        description: "Standardised customer name — uppercased and trimmed"
+        tests:
+          - not_null
+
+      - name: erp_source
+        description: "Source ERP system"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['NAV1', 'NAV2', 'M3_V71', 'M3_V133', 'CLOUDSUITE', 'TROPOS', 'SAGE']
+
+      - name: credit_limit
+        description: "Approved credit limit in GBP"
+        tests:
+          - not_null
+
+      - name: payment_terms
+        description: "Customer payment terms — defaulted to UNKNOWN if missing"
+        tests:
+          - not_null
+
+  - name: stg_erp_promotions
+    description: "Cleaned trade promotion transactions. Null promotions and invalid prices filtered. Discount amount derived."
+    columns:
+      - name: promotion_id
+        description: "Unique promotion transaction identifier"
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Customer receiving the promotion"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_erp_customers')
+              field: customer_id
+
+      - name: erp_source
+        description: "Source ERP system"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['NAV1', 'NAV2', 'M3_V71', 'M3_V133', 'CLOUDSUITE', 'TROPOS', 'SAGE']
+
+      - name: baseline_price
+        description: "Standard list price before promotion"
+        tests:
+          - not_null
+
+      - name: promotional_price
+        description: "Discounted price during promotion"
+        tests:
+          - not_null
+
+      - name: discount_pct
+        description: "Discount as percentage of baseline — must be 0-100"
+        tests:
+          - not_null
+
+      - name: transaction_date
+        description: "Date of promotion transaction"
+        tests:
+          - not_null

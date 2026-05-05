@@ -1,0 +1,46 @@
+version: 2
+
+sources:
+  - name: bronze
+    catalog: main
+    schema: cfg_tpm_bronze
+    description: "Raw ERP data ingested from NovaBite Foods Group source systems"
+    freshness:
+      warn_after: {count: 12, period: hour}
+      error_after: {count: 24, period: hour}
+    loaded_at_field: _ingestion_timestamp
+
+    tables:
+      - name: erp_customers_raw
+        description: "Raw customer master data from all 5 ERP source systems"
+        columns:
+          - name: customer_id
+            description: "Unique customer identifier from source ERP"
+          - name: erp_source
+            description: "Source ERP system — NAV1, NAV2, M3_V133, CLOUDSUITE, TROPOS, SAGE"
+          - name: payment_terms
+            description: "Customer payment terms — NET30, NET45, NET60"
+          - name: credit_limit
+            description: "Approved credit limit in GBP"
+          - name: _ingestion_timestamp
+            description: "Timestamp when record was ingested into Bronze layer"
+
+      - name: trade_promotions_raw
+        description: "Raw trade promotion transactions from all ERP sources"
+        columns:
+          - name: promotion_id
+            description: "Unique promotion transaction identifier"
+          - name: baseline_price
+            description: "Standard list price before promotion"
+          - name: promotional_price
+            description: "Discounted price during promotion period"
+          - name: discount_pct
+            description: "Promotional discount as percentage of baseline"
+          - name: trade_spend_amount
+            description: "Total promotional spend in GBP"
+
+      - name: products_raw
+        description: "Product master data — 15 products across 6 categories"
+
+      - name: price_list_raw
+        description: "ERP-specific price lists — slight variations per ERP system"

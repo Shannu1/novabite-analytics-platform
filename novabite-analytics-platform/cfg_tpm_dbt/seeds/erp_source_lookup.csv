@@ -1,0 +1,8 @@
+erp_source,erp_full_name,region,integration_type,active
+NAV1,Microsoft Dynamics NAV,North England,BATCH,true
+NAV2,Microsoft Dynamics NAV,Midlands,BATCH,true
+M3_V71,Infor M3 v7.1,Legacy,BATCH,false
+M3_V133,Infor M3 v13.3,Scotland/Wales,REALTIME,true
+CLOUDSUITE,Infor CloudSuite Industrial,South England,REALTIME,true
+TROPOS,Aptean TROPOS,East England,BATCH,true
+SAGE,Sage 200,Various,BATCH,true

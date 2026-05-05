@@ -1,0 +1,22 @@
+# Copy this file to ~/.dbt/profiles.yml and fill in your values
+# NEVER commit the actual profiles.yml to GitHub
+
+cfg_tpm_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: <your-workspace>.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/<your-warehouse-id>
+      token: "{{ env_var('DBT_TOKEN') }}"
+      catalog: main
+      schema: cfg_tpm_dev
+      threads: 4
+    prod:
+      type: databricks
+      host: <your-workspace>.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/<your-warehouse-id>
+      token: "{{ env_var('DBT_TOKEN_PROD') }}"
+      catalog: main
+      schema: cfg_tpm_prod
+      threads: 8

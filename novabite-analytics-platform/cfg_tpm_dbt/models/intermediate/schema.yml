@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: int_customers_unified
+    description: "Unified customer master across all ERP sources. Surrogate key handles same customer in multiple ERPs. Includes credit tier and payment days derivations."
+    columns:
+      - name: customer_key
+        description: "Surrogate key — MD5(customer_id | erp_source). Unique per ERP."
+        tests:
+          - not_null
+          - unique
+      - name: customer_id
+        tests:
+          - not_null
+      - name: erp_source
+        tests:
+          - not_null
+      - name: credit_tier
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['PLATINUM', 'GOLD', 'SILVER', 'STANDARD']
