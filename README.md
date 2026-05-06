@@ -200,4 +200,3 @@ JOIN main.cfg_tpm_snapshots.snap_customer_master c
 - [x] Sample data included
 - [ ] dbt metrics layer (coming soon)
 - [ ] Power BI semantic model connection (coming soon)
-- [ ] 
