@@ -1,3 +1,0 @@
-customer_id,customer_name,email,payment_terms,credit_limit,sales_territory,erp_source,status,created_date,_ingestion_timestamp
-CUST006,Highland Grocery Co,highland.grocery.co@retail.co.uk,NET45,120000,SCOTLAND,M3_V133,ACTIVE,2023-01-01,2026-05-05T00:00:29.870659
-CUST007,Celtic Fresh Markets,celtic.fresh.markets@retail.co.uk,NET30,95000,WALES,M3_V133,ACTIVE,2023-01-01,2026-05-05T00:00:29.870662

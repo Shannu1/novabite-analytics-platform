@@ -1,2 +1,0 @@
-customer_id,customer_name,email,payment_terms,credit_limit,sales_territory,erp_source,status,created_date,_ingestion_timestamp
-CUST008,Eastern Value Stores,eastern.value.stores@retail.co.uk,NET45,210000,UK_EAST,TROPOS,ACTIVE,2023-01-01,2026-05-05T00:00:29.871210
