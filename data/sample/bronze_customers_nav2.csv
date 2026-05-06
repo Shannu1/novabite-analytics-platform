@@ -1,0 +1,5 @@
+customer_id,customer_name,email,payment_terms,credit_limit,sales_territory,erp_source,status,created_date,_ingestion_timestamp
+CUST002,Broadway Retail Group,broadway@retail.co.uk,NET45,500000,UK_MIDLANDS,NAV2,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST005,Premier Discount Stores,premier@retail.co.uk,NET30,180000,UK_MIDLANDS,NAV2,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST010,Central Co-operative Foods,central@retail.co.uk,NET60,340000,UK_MIDLANDS,NAV2,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST014,Midland Foodservice Ltd,midland@retail.co.uk,NET45,190000,UK_MIDLANDS,NAV2,ACTIVE,2023-01-01,2024-01-01 06:00:00

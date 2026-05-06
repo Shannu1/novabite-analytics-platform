@@ -1,0 +1,7 @@
+customer_id,customer_name,email,payment_terms,credit_limit,sales_territory,erp_source,status,created_date,_ingestion_timestamp
+CUST003,Greenfield Foods Ltd,greenfield@retail.co.uk,NET30,300000,UK_SOUTH,CLOUDSUITE,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST006,Highland Grocery Co,highland@retail.co.uk,NET45,120000,SCOTLAND,M3_V133,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST007,Celtic Fresh Markets,celtic@retail.co.uk,NET30,95000,WALES,M3_V133,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST008,Eastern Value Stores,eastern@retail.co.uk,NET45,210000,UK_EAST,TROPOS,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST009,Southcoast Retail Ltd,southcoast@retail.co.uk,NET30,160000,UK_SOUTH,CLOUDSUITE,ACTIVE,2023-01-01,2024-01-01 06:00:00
+CUST012,Metro Food Service,metro@retail.co.uk,NET45,445000,UK_SOUTH,CLOUDSUITE,ACTIVE,2023-01-01,2024-01-01 06:00:00

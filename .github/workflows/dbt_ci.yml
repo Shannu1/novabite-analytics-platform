@@ -1,0 +1,31 @@
+name: dbt CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    paths:
+      - 'cfg_tpm_dbt/**'
+jobs:
+  dbt-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Install dbt
+        run: pip install dbt-databricks==1.8.0
+      - name: dbt debug
+        working-directory: cfg_tpm_dbt
+        env:
+          DBT_TOKEN: ${{ secrets.DBT_TOKEN }}
+          DBT_HOST: ${{ secrets.DBT_HOST }}
+        run: dbt debug
+      - name: dbt build
+        working-directory: cfg_tpm_dbt
+        env:
+          DBT_TOKEN: ${{ secrets.DBT_TOKEN }}
+          DBT_HOST: ${{ secrets.DBT_HOST }}
+        run: dbt build --select staging intermediate
